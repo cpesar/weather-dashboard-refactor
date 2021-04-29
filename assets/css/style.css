@@ -104,7 +104,7 @@ header h1 {
   font-size: 20px;
 }
 
-.five-day {
+#five-day-forecast {
   background-color: #df73ff;
   display: grid;
   gap: 20px;
@@ -112,7 +112,7 @@ header h1 {
 
 }
 
-.current-day {
+.day-forecast {
   display: flex;
   flex-direction: column;
   background-color: #7fffd4;
