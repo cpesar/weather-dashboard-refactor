@@ -1,7 +1,60 @@
+/* Apply this to whole doc */
 *{
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+/* Elements available for one screen size 
+but not for others. Media queries turn 
+them on and off */
+.hide {
+  display: none !important;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* override default header height */
+  height: 100px;
+  background-color: #fc0fc0;
+}
+
 header h1 {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 50px;
   
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  border: 5px black;
+  background-color: #0fc0fc;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: black 5px;
+  background-color: #3fff00;
+}
+
+.weather-info {
+
+}
+
+.five-day {
+
 }
