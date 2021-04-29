@@ -87,8 +87,9 @@ header h1 {
   width: 20px;
 }
 
-#search-history {
-
+.history {
+ display: flex;
+ justify-content: flex-start;
 }
 
 .weather-info {
