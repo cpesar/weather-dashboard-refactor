@@ -100,10 +100,15 @@ header h1 {
 
 }
 
+.forecast {
+  font-size: 20px;
+}
+
 .five-day {
   background-color: #df73ff;
   display: grid;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
 }
 
