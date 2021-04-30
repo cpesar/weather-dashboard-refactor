@@ -145,3 +145,10 @@ function addCityToSearchHistory(city) {
   localStorage.setItem('weatherSearchHistory', JSON.stringify(searchHistory));
   htmlSearchHistoryGenerator(searchHistory);
 }
+
+
+
+//TO DO:
+  //CLEAR INPUT BOX AFTER A SEARCH IS COMPLETED
+  //GET RID OF BULLET POINTS FROM UL
+  //ASK BRAD HOW HE GOT THE 5 DAY WEATHER IMAGES TO APPEAR

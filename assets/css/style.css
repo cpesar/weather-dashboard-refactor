@@ -51,6 +51,10 @@ header h1 {
   background-color: #3fff00;
 }
 
+.sidebar h2 {
+  font-size: 25px;
+}
+
 
 
 @media (min-width: 768px) {
@@ -78,7 +82,6 @@ header h1 {
   width: 40px;
   background: orange;
   display: flex;
- 
   cursor: pointer;
 }
 
@@ -101,7 +104,7 @@ header h1 {
 }
 
 .forecast {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #five-day-forecast {
