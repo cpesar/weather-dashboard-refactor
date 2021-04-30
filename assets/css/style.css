@@ -100,12 +100,16 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   justify-content: flex-start;
+}
 
+#today-weather {
+  
 }
 
 #today-weather h2 {
   font-weight: bold;
   font-size: 30px;
+  display: flex;
 }
 
 .forecast {

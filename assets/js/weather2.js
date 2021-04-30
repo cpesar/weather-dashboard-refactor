@@ -49,6 +49,7 @@ function addFiveDayData(data) {
         <h3>${getFormattedDate(data.daily[i].dt, data.timezone_offset)}</h3>
         <img src="http://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png" alt="${data.daily[i].weather.main}"/>
         <p>Temp: ${tempConvert(data.daily[i].temp.day)}℉</p>
+        <p>Windspeed: ${data.daily[i].wind_speed}MPH</p>
         <p>Humidity: ${data.daily[i].humidity}</p>
       </div>
     `;
@@ -154,7 +155,7 @@ function addCityToSearchHistory(city) {
 //TO DO:
   //CLEAR INPUT BOX AFTER A SEARCH IS COMPLETED
   //GET RID OF BULLET POINTS FROM UL
-  //ASK BRAD HOW HE GOT THE 5 DAY WEATHER IMAGES TO APPEAR
+  
 
   //ADD FAVORABLE MODERATE OR SEVERE IMAGE TO UV INDEX
   //ADD CLICKABLE LINKS TO ALLOW THE USER TO CLICK ON CITIES FROM THE SEARCH
