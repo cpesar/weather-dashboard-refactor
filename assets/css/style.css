@@ -49,6 +49,7 @@ header h1 {
   flex-direction: column;
   border: black 5px;
   background-color: #3fff00;
+  align-items: center;
 }
 
 .sidebar h2 {
@@ -91,12 +92,27 @@ header h1 {
 
 .history {
  display: flex;
- justify-content: flex-start;
+ justify-content: center;
 }
 
 .history ul {
+  
   list-style: none;
   font-size: 20px;
+  padding: 0;
+ 
+}
+
+/* UPDATE SEARCH HISTORY THAT COMES BACK FROM LOCAL STORAGE */
+li {
+  padding: 12px;
+  border: 1px solid #8769ff;
+  border-radius: 21px;
+  margin-bottom: 10px;
+}
+
+li:hover {
+  color: pink;
 }
 
 .weather-info {
