@@ -12,7 +12,7 @@ function getFormattedDate(dt, offset) {
   var day = date.getDate().toString();
   day = day.length > 1 ? day : '0' + day;
 
-  return month + '/' + day + '/' + year;
+  return month + '/' + day + '/' + year ;
 }
 
 // CONVERTS TEMP FROM KELVIN TO FARENHEIT
@@ -21,18 +21,20 @@ function tempConvert(temp) {
 }
 
 
-
 // GENERATES CURRENT WEATHER DATA AND ADDS IT TO HTML
 function addCurrentData(data, location) {
   var todayWeather = document.getElementById('today-weather');
+  for (let i = 0; i < 5; i++) {
   todayWeather.innerHTML = `
-    <h2>${location}</h2>
-    <h3>Date: ${getFormattedDate(data.current.dt, data.timezone_offset)} </h3>
+    <h2>${location}
+    ${getFormattedDate(data.current.dt, data.timezone_offset)} 
+    <img src="http://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png" alt="${data.daily[i].weather.main}"/></h2>
     <h3>Temp: ${tempConvert(data.current.temp)}℉</h3>
     <h3>Humidity: ${data.current.humidity}</h3>
-    <h3>Windspeed: ${data.current.wind_speed}m/s</h3>
+    <h3>Windspeed: ${data.current.wind_speed}MPH</h3>
     <h3>UV Index: ${data.current.uvi}</h3>
   `;
+  }
 }
 
 // GENERATES 5 DAY FORECAST AND ADDS IT TO HTML
@@ -45,9 +47,7 @@ function addFiveDayData(data) {
     fiveDayForecast += `
       <div class="day-forecast">
         <h3>${getFormattedDate(data.daily[i].dt, data.timezone_offset)}</h3>
-        <img src="http://openweathermap.org/img/w/${
-          data.daily[i].weather[0].icon
-        }.png" alt="${data.daily[i].weather.main}"/>
+        <img src="http://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png" alt="${data.daily[i].weather.main}"/>
         <p>Temp: ${tempConvert(data.daily[i].temp.day)}℉</p>
         <p>Humidity: ${data.daily[i].humidity}</p>
       </div>
@@ -55,7 +55,10 @@ function addFiveDayData(data) {
       //`` TEMPLATE LITERAL STRINGS USE ${____} AND ALLOW YOU TO WRITE LESS CODE
   }
   fiveDayElement.innerHTML = fiveDayForecast;
+
 }
+
+
 
 
 
@@ -152,3 +155,6 @@ function addCityToSearchHistory(city) {
   //CLEAR INPUT BOX AFTER A SEARCH IS COMPLETED
   //GET RID OF BULLET POINTS FROM UL
   //ASK BRAD HOW HE GOT THE 5 DAY WEATHER IMAGES TO APPEAR
+
+  //ADD FAVORABLE MODERATE OR SEVERE IMAGE TO UV INDEX
+  //ADD CLICKABLE LINKS TO ALLOW THE USER TO CLICK ON CITIES FROM THE SEARCH

@@ -103,6 +103,11 @@ header h1 {
 
 }
 
+#today-weather h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .forecast {
   font-size: 30px;
 }
