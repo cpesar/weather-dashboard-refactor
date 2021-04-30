@@ -32,7 +32,7 @@ function addCurrentData(data, location) {
     <h3>Temp: ${tempConvert(data.current.temp)}℉</h3>
     <h3>Humidity: ${data.current.humidity}</h3>
     <h3>Windspeed: ${data.current.wind_speed}MPH</h3>
-    <h3>UV Index: ${data.current.uvi}</h3>
+    <h3>UV Index: ${data.daily[0].uvi}</h3>
   `;
   }
 }
