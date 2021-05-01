@@ -72,40 +72,41 @@ them on and off */
 } */
 
 .search input {
-  max-width: 200px;
   height: 40px;
-  margin-right: 10px;
   padding: 0 10px;
-  float: left;
+  float: right;
   border-radius: 10px;
   color: aliceblue;
-  
+  max-width: 300px;
+  padding-left: 10px;
 }
 
 .search-btn {
   color: black;
   float: right;
-  width: 200px;
+  width: 300px;
   height: 40px;
   /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  border: none;
-  outline: none;
   background-color: #c0d6ff;
   border-radius: 10px;
+  margin-top: 10px;
+  border: black 1px;
+ 
 }
 
 .search-txt{
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  font-size: 16px;
+  border-style: solid;
+  float: right;
+  font-size: 18px;
   line-height: 40px;
-  background-color: #c0d6ff;
+  
+  justify-content: center;
+  width: 400px;
+  
   
 }
 
@@ -122,6 +123,7 @@ them on and off */
   list-style: none;
   font-size: 20px;
   padding: 30px;
+  margin-top: 80px;
  
 }
 
@@ -132,6 +134,7 @@ li {
   border-radius: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  background-color: cornsilk;
 }
 
 li:hover {
@@ -151,6 +154,7 @@ li:hover {
   padding: 10px;
   border: solid 1px;
   border-radius: 10px;
+  background-color: cornsilk;
   
 }
 
