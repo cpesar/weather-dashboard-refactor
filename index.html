@@ -28,8 +28,12 @@
 
 
     <div class="search">
-      <input class="search-txt" type="text" placeholder="city, state" id="cityState">
-      <a class="search-btn" href="#"></a>
+      <input onkeydown="if(event.keyCode === 13) submit()" class="search-txt" type="text" placeholder="city, state" id="cityState">
+      <a class="search-btn" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+
+      
     
 
       <!-- <div class="search">

@@ -19,7 +19,7 @@ header {
   /* override default header height */
   height: 100px;
   /* background-color: #fc0fc0; */
-  background-image: linear-gradient(to right, #6495ed, #4f86f7, #6ca0dc);
+  background-image: linear-gradient(to right, #4e83e6, #4f86f7, #6ca0dc);
   color: aliceblue;
 }
 
@@ -68,7 +68,7 @@ them on and off */
 }
 
 /* .search {
-  display: flex;
+  background-color: #6ca0dc;
 } */
 
 .search input {
@@ -77,23 +77,36 @@ them on and off */
   margin-right: 10px;
   padding: 0 10px;
   float: left;
+  border-radius: 10px;
+  color: aliceblue;
 }
 
-.search-button {
-  max-width: 100%;
+.search-btn {
+  color: black;
+  float: right;
+  width: 40px;
   height: 40px;
-  width: 40px;
-  background: orange;
+  border-radius: 50%;
   display: flex;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-button img {
-  width: 40px;
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  font-size: 16px;
+  line-height: 40px;
+  background-color: #c0d6ff;
 }
+
+/* #cityState {
+  color: aliceblue;
+} */
 
 .history {
- 
  justify-content: center;
 }
 
@@ -108,13 +121,14 @@ them on and off */
 /* UPDATE SEARCH HISTORY THAT COMES BACK FROM LOCAL STORAGE */
 li {
   padding: 12px;
-  border: 1px solid #8769ff;
-  border-radius: 21px;
+  border: 1px solid black;
+  border-radius: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 li:hover {
-  color: pink;
+  color: #4e83e6;
 }
 
 .weather-info {
@@ -129,6 +143,7 @@ li:hover {
   margin: 10px;
   padding: 10px;
   border: solid 1px;
+  border-radius: 10px;
   
 }
 
@@ -154,8 +169,9 @@ li:hover {
   display: flex;
   flex-direction: column;
   /* background-color: #7fffd4; */
-  background-color: #1e90ff;
+  background-color: #4e83e6;
   color: aliceblue;
   font-weight:inherit;
   padding: 5px;
+  margin: 6px;
 }
