@@ -67,18 +67,24 @@ them on and off */
   }
 }
 
-/* .search {
-  background-color: #6ca0dc;
-} */
-
 .search input {
   height: 40px;
   padding: 0 10px;
   float: right;
   border-radius: 10px;
-  color: aliceblue;
+  color: black;
   max-width: 300px;
   padding-left: 10px;
+}
+
+.search-txt{
+  border-style: solid;
+  float: right;
+  font-size: 18px;
+  line-height: 40px;
+  color: black;
+  justify-content: center;
+  width: 400px;
 }
 
 .search-btn {
@@ -95,24 +101,13 @@ them on and off */
   border-radius: 10px;
   margin-top: 10px;
   border: black 1px;
- 
+  cursor: pointer;
 }
 
-.search-txt{
-  border-style: solid;
-  float: right;
-  font-size: 18px;
-  line-height: 40px;
-  
-  justify-content: center;
-  width: 400px;
-  
-  
+.search-btn:hover{
+  color: #4e83e6;
 }
 
-/* #cityState {
-  align-items: center;
-} */
 
 .history {
  justify-content: center;
@@ -155,13 +150,14 @@ li:hover {
   border: solid 1px;
   border-radius: 10px;
   background-color: cornsilk;
-  
 }
 
 #today-weather h2 {
   font-weight: bold;
   font-size: 30px;
   display: flex;
+  padding: 10px;
+  margin: 10px;
 }
 
 .forecast {
