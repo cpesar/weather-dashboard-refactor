@@ -98,6 +98,7 @@ them on and off */
   align-items: center;
   font-size: 16px;
   background-color: #c0d6ff;
+  color: aliceblue;
   border-radius: 10px;
   margin-top: 10px;
   border: black 1px;
@@ -119,6 +120,7 @@ them on and off */
   font-size: 20px;
   padding: 30px;
   margin-top: 80px;
+  color: #4f86f7;
  
 }
 
@@ -133,7 +135,7 @@ li {
 }
 
 li:hover {
-  color: #4e83e6;
+  color: white;
 }
 
 .weather-info {

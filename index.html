@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://kit.fontawesome.com/668a795429.js" crossorigin="anonymous"></script>
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+  <!-- <script src="https://kit.fontawesome.com/668a795429.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <title>Weather-Dashboard-Refactor</title>
@@ -28,26 +33,14 @@
 
 
     <div class="search">
-      <input onkeydown="if(event.keyCode === 13) submit()" class="search-txt" type="text" placeholder="city, state" id="cityState">
-      <!-- <a class="search-btn" href="#">
-        <i class="fas fa-search"></i>
-      </a> -->
-      <div class="click-here">
-      <button class="search-btn" type="button">Search</button>
-      </div>
+      <input onkeydown="if(event.keyCode === 13) submit()" class="search-txt" type="text" placeholder="city, state" id="cityState" >
     
-
-      <!-- <div class="search">
-        <input onkeydown="if(event.keyCode === 13) submit()"
-        id="cityState" type="text"placeholder="city, state"/> -->
-
-        <!-- <div class="search-button" onclick="submit()">
-          <i class="fas fa-search-plus"></i>
-          <img src="./assets/images/search_icon.webp" alt="search">
-        </div> -->
-          <div class="history">
-            <ul id="search-history"></ul>
-          </div>
+      <div class="click-here">
+      <button onclick="submit()" class="search-btn" type="button">Search</button>
+      </div>
+        <div class="history">
+          <ul id="search-history"></ul>
+        </div>
       </div>
   </div>
     <!-- Child container 2 -->

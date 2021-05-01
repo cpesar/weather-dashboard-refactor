@@ -24,18 +24,41 @@ function tempConvert(temp) {
 // GENERATES CURRENT WEATHER DATA AND ADDS IT TO HTML
 function addCurrentData(data, location) {
   var todayWeather = document.getElementById('today-weather');
+  
   for (let i = 0; i < 5; i++) {
   todayWeather.innerHTML = `
     <h2>${location}
     ${getFormattedDate(data.current.dt, data.timezone_offset)} 
     <img src="http://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png" alt="${data.daily[i].weather.main}"/></h2>
     <h3>Temp: ${tempConvert(data.current.temp)}℉</h3>
-    <h3>Humidity: ${data.current.humidity}</h3>
+    <h3>Humidity: ${data.current.humidity}%</h3>
     <h3>Windspeed: ${data.current.wind_speed}MPH</h3>
-    <h3>UV Index: ${data.daily[0].uvi}</h3>
+    <h3 class="UV-Index"></h3>
   `;
   }
+
+  //COLOR-CODED UV INDEX FOR WARNING LEVEL
+  var uVIndex = data.daily[0].uvi;
+  var buttonEl = document.createElement("button");
+  var uVClass = document.querySelector(".UV-Index");
+  buttonEl.classList.add("btn", "btn-sm");
+  buttonEl.innerHTML = "UV-Index: " + uVIndex
+
+  if (uVIndex >= 7){
+    buttonEl.classList.add("btn-danger");
+
+  } else if (uVIndex >= 4 && uVIndex < 7){
+    buttonEl.classList.add("btn-warning");
+    
+  } else {
+    buttonEl.classList.add("btn-success");
+  }
+  // console.log(uVIndex);
+  uVClass.appendChild(buttonEl);
+
 }
+
+// UV Index: ${data.daily[0].uvi}
 
 // GENERATES 5 DAY FORECAST AND ADDS IT TO HTML
 function addFiveDayData(data) {
@@ -69,9 +92,13 @@ function addFiveDayData(data) {
 //initialLocation parameter is a optional param...look up default javascript parameters...only time function gets called without argument passed in is the input search
 async function submit(initialLocation = null) {
   var location = document.getElementById('cityState').value;
+
+  var clearInput = document.getElementById('cityState');
+  clearInput.innerHTML = '';
+  
   //checks if input has value
   if (initialLocation) {
-    location = initialLocation;
+    location = initialLocation; 
   }
   var encodedLocation = encodeURIComponent(location);
   var googleApiKey = 'AIzaSyD3inT5sV9fa3A2gXTv4gnOQ8UjoUVEG44';
@@ -112,6 +139,7 @@ async function submit(initialLocation = null) {
         spinner.classList.add('hide');
       });
   }
+  
 }
 
 // GENERATES HTML FOR SEARCH HISTORY LIST
@@ -156,6 +184,6 @@ function addCityToSearchHistory(city) {
   //CLEAR INPUT BOX AFTER A SEARCH IS COMPLETED
   
   //MOVE SEARCH-BTN INTO THE SAME BOX AS SEARCH INPUT
-  
+
   //ADD FAVORABLE MODERATE OR SEVERE IMAGE TO UV INDEX
   
