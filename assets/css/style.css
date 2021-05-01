@@ -79,17 +79,23 @@ them on and off */
   float: left;
   border-radius: 10px;
   color: aliceblue;
+  
 }
 
 .search-btn {
   color: black;
   float: right;
-  width: 40px;
+  width: 200px;
   height: 40px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #c0d6ff;
+  border-radius: 10px;
 }
 
 .search-txt{
@@ -100,10 +106,11 @@ them on and off */
   font-size: 16px;
   line-height: 40px;
   background-color: #c0d6ff;
+  
 }
 
 /* #cityState {
-  color: aliceblue;
+  align-items: center;
 } */
 
 .history {
@@ -159,7 +166,6 @@ li:hover {
 
 #five-day-forecast {
   /* background-color: #df73ff; */
-  
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
