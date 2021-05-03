@@ -56,6 +56,8 @@ function addCurrentData(data, location) {
   // console.log(uVIndex);
   uVClass.appendChild(buttonEl);
 
+
+
 }
 
 // UV Index: ${data.daily[0].uvi}
@@ -93,8 +95,11 @@ function addFiveDayData(data) {
 async function submit(initialLocation = null) {
   var location = document.getElementById('cityState').value;
 
+  //CLEAR USER INPUT FIELD AFTER COMPLETED SEARCH
   var clearInput = document.getElementById('cityState');
   clearInput.innerHTML = '';
+
+ 
   
   //checks if input has value
   if (initialLocation) {
@@ -137,6 +142,7 @@ async function submit(initialLocation = null) {
         addCurrentData(data, location);
         addFiveDayData(data);
         spinner.classList.add('hide');
+        
       });
   }
   
