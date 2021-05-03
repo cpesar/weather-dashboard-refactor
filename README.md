@@ -1,3 +1,4 @@
+<img width="1428" alt="weather-dash" src="https://user-images.githubusercontent.com/77510555/116840450-1c673480-ab93-11eb-8148-76baccf7b183.png">
 # Weather-Dashboard-Refactor
 
 
